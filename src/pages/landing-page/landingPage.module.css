@@ -1,0 +1,103 @@
+/* Landing page */
+
+.campground {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.logoContainer,
+.showcase {
+  padding: 1.5rem;
+}
+
+.showcase {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+}
+.imgContainer {
+  background-image: url('../../assets/small-hero.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50vh;
+}
+
+.title,
+.content {
+  color: var(--clr-secondary);
+  letter-spacing: -0.01em;
+}
+
+.title {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semi-bold);
+}
+
+.content {
+  font-size: var(--fs-normal);
+  font-weight: var(--fw-medium);
+  opacity: 0.85;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+  padding-top: 1.5rem;
+}
+
+.listItem {
+  display: flex;
+  gap: 1rem;
+}
+
+.campgroundBtn {
+  margin-top: 1.5rem;
+  padding: 1rem 7rem;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-light-green);
+  border-radius: 16px;
+  box-shadow: 7px 7px var(--clr-dark-green);
+  border: none;
+  font-size: var(--fs-normal);
+  font-weight: var(--fw-medium);
+  transition: all 350ms ease;
+  cursor: pointer;
+}
+
+.campgroundBtn:hover {
+  transform: translateY(2px);
+}
+
+@media (min-width: 60em) {
+  .campground {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'header header'
+      'showcase image';
+    gap: 1rem;
+  }
+
+  .logoContainer {
+    grid-area: header;
+  }
+  .showcase {
+    justify-content: center;
+    align-items: flex-start;
+    grid-area: showcase;
+  }
+  .imgContainer {
+    background-image: url('../../assets/hero.jpg');
+    min-height: 100vh;
+    grid-area: image;
+    border-top-left-radius: 16px;
+  }
+}

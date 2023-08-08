@@ -1,0 +1,53 @@
+:root {
+  /* Font family */
+  --ff-archivo: 'Archivo', sans-serif;
+
+  /* Font sizes */
+  --fs-3xl: 3rem;
+  --fs-2xl: 2.5rem;
+  --fs-xl: 2rem;
+  --fs-large: 1.5rem;
+  --fs-normal: 1rem;
+  --fs-small: 0.875rem;
+
+  /* Font weights */
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+
+  /* Colors */
+
+  --clr-primary: #f6f2ca;
+  --clr-secondary: #1b1b1b;
+  --clr-red-accent: #bc4749;
+  --clr-dark-green: #6a994e;
+  --clr-light-green: #a7c957;
+  --clr-white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--clr-primary);
+  font-size: var(--fs-normal);
+  font-weight: var(--fw-regular);
+  font-family: var(--ff-archivo);
+}
+
+span,
+a {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-secondary);
+  font-weight: var(--fw-semi-bold);
+}
